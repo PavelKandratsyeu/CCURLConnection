@@ -10,7 +10,6 @@
 		DBCE112F19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
 		DBCE113D19470A9000ECAD14 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE113C19470A9000ECAD14 /* XCTest.framework */; };
 		DBCE113E19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
-		DBCE114019470A9000ECAD14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE113F19470A9000ECAD14 /* UIKit.framework */; };
 		DBCE114319470A9000ECAD14 /* libCCURLConnection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112B19470A9000ECAD14 /* libCCURLConnection.a */; };
 		DBCE114919470A9000ECAD14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBCE114719470A9000ECAD14 /* InfoPlist.strings */; };
 		DBCE114B19470A9000ECAD14 /* CCURLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE114A19470A9000ECAD14 /* CCURLConnectionTests.m */; };
@@ -28,6 +27,8 @@
 		DBCE118719470C8900ECAD14 /* CCTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117519470C8900ECAD14 /* CCTextParser.m */; };
 		DBCE118819470C8900ECAD14 /* CCURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117719470C8900ECAD14 /* CCURLConnection.m */; };
 		DBCE118D1947202600ECAD14 /* CCBasicParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE118C1947202600ECAD14 /* CCBasicParser.m */; };
+		DBCE119619473CA100ECAD14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE119519473CA100ECAD14 /* UIKit.framework */; };
+		DBCE119719473CAC00ECAD14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE119519473CA100ECAD14 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,6 @@
 		DBCE113219470A9000ECAD14 /* CCURLConnection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCURLConnection-Prefix.pch"; sourceTree = "<group>"; };
 		DBCE113B19470A9000ECAD14 /* CCURLConnectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCURLConnectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE113C19470A9000ECAD14 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DBCE113F19470A9000ECAD14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DBCE114619470A9000ECAD14 /* CCURLConnectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCURLConnectionTests-Info.plist"; sourceTree = "<group>"; };
 		DBCE114819470A9000ECAD14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DBCE114A19470A9000ECAD14 /* CCURLConnectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCURLConnectionTests.m; sourceTree = "<group>"; };
@@ -96,6 +96,8 @@
 		DBCE118C1947202600ECAD14 /* CCBasicParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBasicParser.m; sourceTree = "<group>"; };
 		DBCE118E1947206000ECAD14 /* CCParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCParser.h; sourceTree = "<group>"; };
 		DBCE118F1947231D00ECAD14 /* CCEncoders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCEncoders.h; sourceTree = "<group>"; };
+		DBCE119319473BED00ECAD14 /* CCURLConnection.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CCURLConnection.podspec; sourceTree = "<group>"; };
+		DBCE119519473CA100ECAD14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCE119619473CA100ECAD14 /* UIKit.framework in Frameworks */,
 				DBCE112F19470A9000ECAD14 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,7 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBCE113D19470A9000ECAD14 /* XCTest.framework in Frameworks */,
-				DBCE114019470A9000ECAD14 /* UIKit.framework in Frameworks */,
+				DBCE119719473CAC00ECAD14 /* UIKit.framework in Frameworks */,
 				DBCE113E19470A9000ECAD14 /* Foundation.framework in Frameworks */,
 				DBCE114319470A9000ECAD14 /* libCCURLConnection.a in Frameworks */,
 			);
@@ -124,6 +127,7 @@
 		DBCE112219470A9000ECAD14 = {
 			isa = PBXGroup;
 			children = (
+				DBCE119319473BED00ECAD14 /* CCURLConnection.podspec */,
 				DBCE113019470A9000ECAD14 /* CCURLConnection */,
 				DBCE114419470A9000ECAD14 /* CCURLConnectionTests */,
 				DBCE112D19470A9000ECAD14 /* Frameworks */,
@@ -143,9 +147,9 @@
 		DBCE112D19470A9000ECAD14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBCE119519473CA100ECAD14 /* UIKit.framework */,
 				DBCE112E19470A9000ECAD14 /* Foundation.framework */,
 				DBCE113C19470A9000ECAD14 /* XCTest.framework */,
-				DBCE113F19470A9000ECAD14 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -433,6 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/CCURLConnection.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCURLConnection/CCURLConnection-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -445,6 +453,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/CCURLConnection.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCURLConnection/CCURLConnection-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";

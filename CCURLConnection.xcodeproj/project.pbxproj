@@ -8,14 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DBCE112F19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
-		DBCE113419470A9000ECAD14 /* CCURLConnection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBCE113319470A9000ECAD14 /* CCURLConnection.h */; };
-		DBCE113619470A9000ECAD14 /* CCURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE113519470A9000ECAD14 /* CCURLConnection.m */; };
 		DBCE113D19470A9000ECAD14 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE113C19470A9000ECAD14 /* XCTest.framework */; };
 		DBCE113E19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
 		DBCE114019470A9000ECAD14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE113F19470A9000ECAD14 /* UIKit.framework */; };
 		DBCE114319470A9000ECAD14 /* libCCURLConnection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112B19470A9000ECAD14 /* libCCURLConnection.a */; };
 		DBCE114919470A9000ECAD14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBCE114719470A9000ECAD14 /* InfoPlist.strings */; };
 		DBCE114B19470A9000ECAD14 /* CCURLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE114A19470A9000ECAD14 /* CCURLConnectionTests.m */; };
+		DBCE117A19470C8900ECAD14 /* CCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115519470C8900ECAD14 /* CCApplication.m */; };
+		DBCE117B19470C8900ECAD14 /* CCAspNetBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115819470C8900ECAD14 /* CCAspNetBodyEncoder.m */; };
+		DBCE117C19470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115A19470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.m */; };
+		DBCE117D19470C8900ECAD14 /* CCAspNetQueryEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115C19470C8900ECAD14 /* CCAspNetQueryEncoder.m */; };
+		DBCE117E19470C8900ECAD14 /* CCDefaultBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115F19470C8900ECAD14 /* CCDefaultBodyEncoder.m */; };
+		DBCE117F19470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116119470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.m */; };
+		DBCE118019470C8900ECAD14 /* CCDefaultQueryEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116319470C8900ECAD14 /* CCDefaultQueryEncoder.m */; };
+		DBCE118119470C8900ECAD14 /* CCJsonBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116519470C8900ECAD14 /* CCJsonBodyEncoder.m */; };
+		DBCE118219470C8900ECAD14 /* CCFilePostParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116919470C8900ECAD14 /* CCFilePostParameter.m */; };
+		DBCE118419470C8900ECAD14 /* NSString+EncodeURLParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116D19470C8900ECAD14 /* NSString+EncodeURLParameter.m */; };
+		DBCE118619470C8900ECAD14 /* CCJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117219470C8900ECAD14 /* CCJsonParser.m */; };
+		DBCE118719470C8900ECAD14 /* CCTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117519470C8900ECAD14 /* CCTextParser.m */; };
+		DBCE118819470C8900ECAD14 /* CCURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117719470C8900ECAD14 /* CCURLConnection.m */; };
+		DBCE118D1947202600ECAD14 /* CCBasicParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE118C1947202600ECAD14 /* CCBasicParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +47,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				DBCE113419470A9000ECAD14 /* CCURLConnection.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +56,46 @@
 		DBCE112B19470A9000ECAD14 /* libCCURLConnection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCURLConnection.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE112E19470A9000ECAD14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DBCE113219470A9000ECAD14 /* CCURLConnection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCURLConnection-Prefix.pch"; sourceTree = "<group>"; };
-		DBCE113319470A9000ECAD14 /* CCURLConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCURLConnection.h; sourceTree = "<group>"; };
-		DBCE113519470A9000ECAD14 /* CCURLConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCURLConnection.m; sourceTree = "<group>"; };
 		DBCE113B19470A9000ECAD14 /* CCURLConnectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCURLConnectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE113C19470A9000ECAD14 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DBCE113F19470A9000ECAD14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DBCE114619470A9000ECAD14 /* CCURLConnectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCURLConnectionTests-Info.plist"; sourceTree = "<group>"; };
 		DBCE114819470A9000ECAD14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DBCE114A19470A9000ECAD14 /* CCURLConnectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCURLConnectionTests.m; sourceTree = "<group>"; };
+		DBCE115419470C8900ECAD14 /* CCApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCApplication.h; sourceTree = "<group>"; };
+		DBCE115519470C8900ECAD14 /* CCApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCApplication.m; sourceTree = "<group>"; };
+		DBCE115719470C8900ECAD14 /* CCAspNetBodyEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAspNetBodyEncoder.h; sourceTree = "<group>"; };
+		DBCE115819470C8900ECAD14 /* CCAspNetBodyEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAspNetBodyEncoder.m; sourceTree = "<group>"; };
+		DBCE115919470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAspNetMultipartBodyEncoder.h; sourceTree = "<group>"; };
+		DBCE115A19470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAspNetMultipartBodyEncoder.m; sourceTree = "<group>"; };
+		DBCE115B19470C8900ECAD14 /* CCAspNetQueryEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAspNetQueryEncoder.h; sourceTree = "<group>"; };
+		DBCE115C19470C8900ECAD14 /* CCAspNetQueryEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAspNetQueryEncoder.m; sourceTree = "<group>"; };
+		DBCE115D19470C8900ECAD14 /* CCBodyEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBodyEncoder.h; sourceTree = "<group>"; };
+		DBCE115E19470C8900ECAD14 /* CCDefaultBodyEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDefaultBodyEncoder.h; sourceTree = "<group>"; };
+		DBCE115F19470C8900ECAD14 /* CCDefaultBodyEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDefaultBodyEncoder.m; sourceTree = "<group>"; };
+		DBCE116019470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDefaultMultipartBodyEncoder.h; sourceTree = "<group>"; };
+		DBCE116119470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDefaultMultipartBodyEncoder.m; sourceTree = "<group>"; };
+		DBCE116219470C8900ECAD14 /* CCDefaultQueryEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDefaultQueryEncoder.h; sourceTree = "<group>"; };
+		DBCE116319470C8900ECAD14 /* CCDefaultQueryEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDefaultQueryEncoder.m; sourceTree = "<group>"; };
+		DBCE116419470C8900ECAD14 /* CCJsonBodyEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCJsonBodyEncoder.h; sourceTree = "<group>"; };
+		DBCE116519470C8900ECAD14 /* CCJsonBodyEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCJsonBodyEncoder.m; sourceTree = "<group>"; };
+		DBCE116619470C8900ECAD14 /* CCMultipartEncoderConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMultipartEncoderConstants.h; sourceTree = "<group>"; };
+		DBCE116719470C8900ECAD14 /* CCQueryEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCQueryEncoder.h; sourceTree = "<group>"; };
+		DBCE116819470C8900ECAD14 /* CCFilePostParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFilePostParameter.h; sourceTree = "<group>"; };
+		DBCE116919470C8900ECAD14 /* CCFilePostParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFilePostParameter.m; sourceTree = "<group>"; };
+		DBCE116C19470C8900ECAD14 /* NSString+EncodeURLParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EncodeURLParameter.h"; sourceTree = "<group>"; };
+		DBCE116D19470C8900ECAD14 /* NSString+EncodeURLParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EncodeURLParameter.m"; sourceTree = "<group>"; };
+		DBCE117119470C8900ECAD14 /* CCJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCJsonParser.h; sourceTree = "<group>"; };
+		DBCE117219470C8900ECAD14 /* CCJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCJsonParser.m; sourceTree = "<group>"; };
+		DBCE117419470C8900ECAD14 /* CCTextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextParser.h; sourceTree = "<group>"; };
+		DBCE117519470C8900ECAD14 /* CCTextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTextParser.m; sourceTree = "<group>"; };
+		DBCE117619470C8900ECAD14 /* CCURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCURLConnection.h; sourceTree = "<group>"; };
+		DBCE117719470C8900ECAD14 /* CCURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCURLConnection.m; sourceTree = "<group>"; };
+		DBCE118A1947130400ECAD14 /* CCParsers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCParsers.h; sourceTree = "<group>"; };
+		DBCE118B1947202600ECAD14 /* CCBasicParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBasicParser.h; sourceTree = "<group>"; };
+		DBCE118C1947202600ECAD14 /* CCBasicParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBasicParser.m; sourceTree = "<group>"; };
+		DBCE118E1947206000ECAD14 /* CCParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCParser.h; sourceTree = "<group>"; };
+		DBCE118F1947231D00ECAD14 /* CCEncoders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCEncoders.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +153,16 @@
 		DBCE113019470A9000ECAD14 /* CCURLConnection */ = {
 			isa = PBXGroup;
 			children = (
-				DBCE113319470A9000ECAD14 /* CCURLConnection.h */,
-				DBCE113519470A9000ECAD14 /* CCURLConnection.m */,
+				DBCE115619470C8900ECAD14 /* Encoders */,
+				DBCE116E19470C8900ECAD14 /* Parsers */,
+				DBCE115419470C8900ECAD14 /* CCApplication.h */,
+				DBCE115519470C8900ECAD14 /* CCApplication.m */,
+				DBCE116819470C8900ECAD14 /* CCFilePostParameter.h */,
+				DBCE116919470C8900ECAD14 /* CCFilePostParameter.m */,
+				DBCE116C19470C8900ECAD14 /* NSString+EncodeURLParameter.h */,
+				DBCE116D19470C8900ECAD14 /* NSString+EncodeURLParameter.m */,
+				DBCE117619470C8900ECAD14 /* CCURLConnection.h */,
+				DBCE117719470C8900ECAD14 /* CCURLConnection.m */,
 				DBCE113119470A9000ECAD14 /* Supporting Files */,
 			);
 			path = CCURLConnection;
@@ -141,6 +192,46 @@
 				DBCE114719470A9000ECAD14 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBCE115619470C8900ECAD14 /* Encoders */ = {
+			isa = PBXGroup;
+			children = (
+				DBCE118F1947231D00ECAD14 /* CCEncoders.h */,
+				DBCE116619470C8900ECAD14 /* CCMultipartEncoderConstants.h */,
+				DBCE115D19470C8900ECAD14 /* CCBodyEncoder.h */,
+				DBCE115E19470C8900ECAD14 /* CCDefaultBodyEncoder.h */,
+				DBCE115F19470C8900ECAD14 /* CCDefaultBodyEncoder.m */,
+				DBCE116019470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.h */,
+				DBCE116119470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.m */,
+				DBCE115719470C8900ECAD14 /* CCAspNetBodyEncoder.h */,
+				DBCE115819470C8900ECAD14 /* CCAspNetBodyEncoder.m */,
+				DBCE115919470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.h */,
+				DBCE115A19470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.m */,
+				DBCE116419470C8900ECAD14 /* CCJsonBodyEncoder.h */,
+				DBCE116519470C8900ECAD14 /* CCJsonBodyEncoder.m */,
+				DBCE116719470C8900ECAD14 /* CCQueryEncoder.h */,
+				DBCE116219470C8900ECAD14 /* CCDefaultQueryEncoder.h */,
+				DBCE116319470C8900ECAD14 /* CCDefaultQueryEncoder.m */,
+				DBCE115B19470C8900ECAD14 /* CCAspNetQueryEncoder.h */,
+				DBCE115C19470C8900ECAD14 /* CCAspNetQueryEncoder.m */,
+			);
+			path = Encoders;
+			sourceTree = "<group>";
+		};
+		DBCE116E19470C8900ECAD14 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				DBCE118A1947130400ECAD14 /* CCParsers.h */,
+				DBCE118E1947206000ECAD14 /* CCParser.h */,
+				DBCE117119470C8900ECAD14 /* CCJsonParser.h */,
+				DBCE117219470C8900ECAD14 /* CCJsonParser.m */,
+				DBCE117419470C8900ECAD14 /* CCTextParser.h */,
+				DBCE117519470C8900ECAD14 /* CCTextParser.m */,
+				DBCE118B1947202600ECAD14 /* CCBasicParser.h */,
+				DBCE118C1947202600ECAD14 /* CCBasicParser.m */,
+			);
+			path = Parsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +314,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCE113619470A9000ECAD14 /* CCURLConnection.m in Sources */,
+				DBCE118819470C8900ECAD14 /* CCURLConnection.m in Sources */,
+				DBCE118619470C8900ECAD14 /* CCJsonParser.m in Sources */,
+				DBCE117D19470C8900ECAD14 /* CCAspNetQueryEncoder.m in Sources */,
+				DBCE118719470C8900ECAD14 /* CCTextParser.m in Sources */,
+				DBCE118D1947202600ECAD14 /* CCBasicParser.m in Sources */,
+				DBCE117C19470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.m in Sources */,
+				DBCE118419470C8900ECAD14 /* NSString+EncodeURLParameter.m in Sources */,
+				DBCE118019470C8900ECAD14 /* CCDefaultQueryEncoder.m in Sources */,
+				DBCE117E19470C8900ECAD14 /* CCDefaultBodyEncoder.m in Sources */,
+				DBCE118119470C8900ECAD14 /* CCJsonBodyEncoder.m in Sources */,
+				DBCE117F19470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.m in Sources */,
+				DBCE117A19470C8900ECAD14 /* CCApplication.m in Sources */,
+				DBCE118219470C8900ECAD14 /* CCFilePostParameter.m in Sources */,
+				DBCE117B19470C8900ECAD14 /* CCAspNetBodyEncoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +508,7 @@
 				DBCE115019470A9000ECAD14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBCE115119470A9000ECAD14 /* Build configuration list for PBXNativeTarget "CCURLConnectionTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +517,7 @@
 				DBCE115319470A9000ECAD14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

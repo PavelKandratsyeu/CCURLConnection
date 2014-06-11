@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>08A37890-FA83-4F3A-BA9B-A47CAD9058E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CCURLConnection</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B1D70BBF-711C-4DA1-8F7A-CE0BB116AF83</key>
+		<string>https://github.com/KondratyevPavel/CCURLConnection.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CCURLConnection.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B1D70BBF-711C-4DA1-8F7A-CE0BB116AF83</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KondratyevPavel/CCURLConnection.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B1D70BBF-711C-4DA1-8F7A-CE0BB116AF83</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B1D70BBF-711C-4DA1-8F7A-CE0BB116AF83</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CCURLConnection</string>
+		</dict>
+	</array>
+</dict>
+</plist>

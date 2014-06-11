@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/KondratyevPavel/CCURLConnection.git"}
+  s.source       = { :git => "https://github.com/KondratyevPavel/CCURLConnection.git”, :commit => “3c2c01e6c6e41f8785a5aa63d2d1f5328aaddfb7”}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

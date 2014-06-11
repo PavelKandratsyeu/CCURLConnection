@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/KondratyevPavel/CCURLConnection.git”, :commit => “3c2c01e6c6e41f8785a5aa63d2d1f5328aaddfb7”}
+  s.source       = { :git => "https://github.com/KondratyevPavel/CCURLConnection.git", :commit => "ddfb05e82620c4d41b2d26f77169175078735f1c"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

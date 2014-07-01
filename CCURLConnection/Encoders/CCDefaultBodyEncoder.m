@@ -15,10 +15,9 @@ static CCDefaultBodyEncoder *_encoder;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCDefaultBodyEncoder class]) {
         _encoder = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedEncoder

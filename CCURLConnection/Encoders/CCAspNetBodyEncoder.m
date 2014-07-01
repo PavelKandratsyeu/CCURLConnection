@@ -15,10 +15,9 @@ static CCAspNetBodyEncoder *_encoder;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCAspNetBodyEncoder class]) {
         _encoder = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedEncoder

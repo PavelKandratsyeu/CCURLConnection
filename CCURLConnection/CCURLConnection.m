@@ -25,6 +25,7 @@
 
 @implementation CCURLConnection
 
+static NSUInteger _maxFileSize;
 static NSDictionary *_parsers;
 static NSDictionary *_methods;
 static NSArray *_queryEncoders;
@@ -32,8 +33,7 @@ static NSArray *_bodyEncoders;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCURLConnection class]) {
         _parsers = @{@"application/json": [CCJsonParser sharedParser],
                      @"text/plain": [CCTextParser sharedParser],
                      @"text/html": [CCTextParser sharedParser],
@@ -48,7 +48,18 @@ static NSArray *_bodyEncoders;
         _queryEncoders = @[[CCDefaultQueryEncoder sharedEncoder], [CCAspNetQueryEncoder sharedEncoder], [CCDefaultQueryEncoder sharedEncoder]];
         _bodyEncoders = @[@[[CCDefaultBodyEncoder sharedEncoder], [CCAspNetBodyEncoder sharedEncoder], [CCJsonBodyEncoder sharedEncoder]],
                           @[[CCDefaultMultipartBodyEncoder sharedEncoder], [CCAspNetMultipartBodyEncoder sharedEncoder], [CCDefaultMultipartBodyEncoder sharedEncoder]]];
-    });
+        [self setMaxFileSize:0xffffffff];
+    }
+}
+
++ (NSUInteger)maxFileSize
+{
+    return _maxFileSize;
+}
+
++ (void)setMaxFileSize:(NSUInteger)maxFileSize
+{
+    _maxFileSize = maxFileSize;
 }
 
 - (void)startWithURL:(NSURL *)url
@@ -71,7 +82,7 @@ static NSArray *_bodyEncoders;
                 url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", url.absoluteString, url.query.length ? @"&" : @"?", [params componentsJoinedByString:@"&"]]];
             }
             if (!url) {
-                error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCREQUEST_BUILDER_ERROR_INVALID_ADDRESS userInfo:nil];
+                error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCRequestBuilderErrorInvalidAddress userInfo:nil];
                 break;
             }
             request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
@@ -81,7 +92,7 @@ static NSArray *_bodyEncoders;
         case CCURLRequestMethodPatch:
         case CCURLRequestMethodPut: {
             if (!url) {
-                error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCREQUEST_BUILDER_ERROR_INVALID_ADDRESS userInfo:nil];
+                error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCRequestBuilderErrorInvalidAddress userInfo:nil];
                 break;
             }
             request = [NSMutableURLRequest requestWithURL:url];
@@ -98,7 +109,7 @@ static NSArray *_bodyEncoders;
         }
             break;
         default:
-            error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCREQUEST_BUILDER_ERROR_METHOD_UNDEFINED userInfo:nil];
+            error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCRequestBuilderErrorMethodUndefined userInfo:nil];
     }
     if (error) {
         self.connection = nil;
@@ -173,7 +184,7 @@ static NSArray *_bodyEncoders;
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     if (self.callback) {
-        self.callback(self, self.parsedResponse, (self.response.statusCode / 100 == 2 ?
+        self.callback(self, self.parsedResponse, (self.response.statusCode / 100 == CCHTTPStatusTypeSuccess ?
                                                   nil :
                                                   [NSError errorWithDomain:CCURL_CONNECTION_ERROR_DOMAIN code:self.response.statusCode userInfo:nil]));
     }

@@ -14,10 +14,9 @@ static CCTextParser *_parser;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCTextParser class]) {
         _parser = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedParser

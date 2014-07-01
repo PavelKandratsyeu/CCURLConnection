@@ -14,10 +14,9 @@ static CCJsonParser *_parser;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCJsonParser class]) {
         _parser = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedParser

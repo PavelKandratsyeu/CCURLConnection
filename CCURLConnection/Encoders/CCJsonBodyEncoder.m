@@ -14,10 +14,9 @@ static CCJsonBodyEncoder *_encoder;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCJsonBodyEncoder class]) {
         _encoder = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedEncoder
@@ -29,7 +28,7 @@ static CCJsonBodyEncoder *_encoder;
 
 - (NSData *)dataWithObject:(id)object error:(NSError **)error
 {
-    return [NSJSONSerialization dataWithJSONObject:object options:0 error:error];
+    return (object ? [NSJSONSerialization dataWithJSONObject:object options:0 error:error] : nil);
 }
 
 - (NSString *)contentType

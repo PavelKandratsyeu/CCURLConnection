@@ -23,10 +23,9 @@ static CCAspNetQueryEncoder *_encoder;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCAspNetQueryEncoder class]) {
         _encoder = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedEncoder
@@ -53,7 +52,7 @@ static CCAspNetQueryEncoder *_encoder;
         [parameters addObject:[NSString stringWithFormat:@"%@=", prefix]];
     } else if ([object isKindOfClass:[CCFilePostParameter class]]) {
         if (error) {
-            *error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCREQUEST_BUILDER_ERROR_INVALID_PARAMETER userInfo:nil];
+            *error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCRequestBuilderErrorInvalidParameter userInfo:nil];
         }
         fail = YES;
     } else {

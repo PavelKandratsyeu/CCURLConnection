@@ -14,10 +14,9 @@ static CCBasicParser *_parser;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCBasicParser class]) {
         _parser = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedParser

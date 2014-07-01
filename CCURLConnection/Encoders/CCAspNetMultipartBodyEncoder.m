@@ -23,10 +23,9 @@ static CCAspNetMultipartBodyEncoder *_encoder;
 
 + (void)initialize
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (self == [CCAspNetMultipartBodyEncoder class]) {
         _encoder = [self new];
-    });
+    }
 }
 
 + (instancetype)sharedEncoder
@@ -52,9 +51,9 @@ static CCAspNetMultipartBodyEncoder *_encoder;
     else if ([object isKindOfClass:[NSNull class]]) {
         [data appendData:[[NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"\r\n\r\n\r\n", MULTIPART_BOUNDARY, prefix] dataUsingEncoding:NSUTF8StringEncoding]];
     } else if ([object isKindOfClass:[CCFilePostParameter class]]) {
-        if ([object data].length > MAX_FILE_SIZE) {
+        if ([object data].length > [CCURLConnection maxFileSize]) {
             if (error) {
-                *error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCREQUEST_BUILDER_ERROR_TOO_LARGE_FILE userInfo:nil];
+                *error = [NSError errorWithDomain:CCREQUEST_BUILDER_ERROR_DOMAIN code:CCRequestBuilderErrorTooLargeFile userInfo:nil];
             }
             fail = YES;
         } else {

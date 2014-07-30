@@ -37,15 +37,23 @@ static CCDefaultMultipartBodyEncoder *_encoder;
 {
     __block BOOL fail = NO;
     if ([object respondsToSelector:@selector(enumerateKeysAndObjectsUsingBlock:)]) {
+        __block NSError *err;
         [object enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
             *stop = fail = [self encodeParameter:(prefix.length
                                                     ? [NSString stringWithFormat:@"%@[%@]", prefix, key]
-                                                    : key) object:obj to:data error:error];
+                                                    : key) object:obj to:data error:&err];
         }];
+        if (error) {
+            *error = err;
+        }
     } else if ([object respondsToSelector:@selector(enumerateObjectsUsingBlock:)]) {
+        __block NSError *err;
         [object enumerateObjectsUsingBlock:^(id obj, NSUInteger unused, BOOL *stop) {
-            *stop = fail = [self encodeParameter:[NSString stringWithFormat:@"%@[]", prefix] object:obj to:data error:error];
+            *stop = fail = [self encodeParameter:[NSString stringWithFormat:@"%@[]", prefix] object:obj to:data error:&err];
         }];
+        if (error) {
+            *error = err;
+        }
     } else if ([object isKindOfClass:[NSNull class]]) {
         [data appendData:[[NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"\r\n\r\n\r\n", MULTIPART_BOUNDARY, prefix] dataUsingEncoding:NSUTF8StringEncoding]];
     } else if ([object isKindOfClass:[CCFilePostParameter class]]) {

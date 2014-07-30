@@ -37,16 +37,24 @@ static CCAspNetQueryEncoder *_encoder;
 {
     __block BOOL fail = NO;
     if ([object respondsToSelector:@selector(enumerateKeysAndObjectsUsingBlock:)]) {
+        __block NSError *err;
         [object enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
             *stop = fail = [self encodeParameter:(prefix.length
                                                 ? [NSString stringWithFormat:@"%@.%@", prefix, key]
-                                                : key) object:obj to:parameters error:error];
+                                                : key) object:obj to:parameters error:&err];
         }];
+        if (error) {
+            *error = err;
+        }
     } else if ([object respondsToSelector:@selector(enumerateObjectsUsingBlock:)]) {
         __block unsigned long idx = 0;
+        __block NSError *err;
         [object enumerateObjectsUsingBlock:^(id obj, NSUInteger unused, BOOL *stop) {
-            *stop = fail = [self encodeParameter:[NSString stringWithFormat:@"%@%%5B%lu%%5D", prefix, idx++] object:obj to:parameters error:error];
+            *stop = fail = [self encodeParameter:[NSString stringWithFormat:@"%@%%5B%lu%%5D", prefix, idx++] object:obj to:parameters error:&err];
         }];
+        if (error) {
+            *error = err;
+        }
     }
     else if ([object isKindOfClass:[NSNull class]]) {
         [parameters addObject:[NSString stringWithFormat:@"%@=", prefix]];

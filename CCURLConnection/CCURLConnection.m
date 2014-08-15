@@ -97,9 +97,21 @@ static NSArray *_bodyEncoders;
             }
             request = [NSMutableURLRequest requestWithURL:url];
             __block BOOL isMultipart = NO;
-            [parameters enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-                *stop = isMultipart = [obj isKindOfClass:[CCFilePostParameter class]];
-            }];
+            NSMutableSet *parametersToCheck = [NSMutableSet setWithArray:parameters.allValues];
+            for (id obj = parametersToCheck.anyObject; obj; [parametersToCheck removeObject:obj], obj = parametersToCheck.anyObject) {
+                if ([obj respondsToSelector:@selector(enumerateKeysAndObjectsUsingBlock:)]) {
+                    [obj enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                        [parametersToCheck addObject:obj];
+                    }];
+                } else if ([obj respondsToSelector:@selector(enumerateObjectsUsingBlock:)]) {
+                    [obj enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                        [parametersToCheck addObject:obj];
+                    }];
+                } else if ([obj isKindOfClass:[CCFilePostParameter class]]) {
+                    isMultipart = YES;
+                    break;
+                }
+            }
             NSData *data = [_bodyEncoders[isMultipart][encodingStyle] dataWithObject:parameters error:&error];
             if (!data) {
                 break;

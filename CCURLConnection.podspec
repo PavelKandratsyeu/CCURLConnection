@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CCURLConnection"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A library to simplify interactions with remote APIs."
 
   # s.description  = <<-DESC

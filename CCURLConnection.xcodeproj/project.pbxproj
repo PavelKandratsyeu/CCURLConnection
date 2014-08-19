@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBBB549119A37BA9007F77FD /* CCMultipartParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBB549019A37BA9007F77FD /* CCMultipartParser.m */; };
 		DBCE112F19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
 		DBCE113D19470A9000ECAD14 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE113C19470A9000ECAD14 /* XCTest.framework */; };
 		DBCE113E19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
@@ -54,6 +55,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DBBB548F19A37BA9007F77FD /* CCMultipartParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMultipartParser.h; sourceTree = "<group>"; };
+		DBBB549019A37BA9007F77FD /* CCMultipartParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMultipartParser.m; sourceTree = "<group>"; };
 		DBCE112B19470A9000ECAD14 /* libCCURLConnection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCURLConnection.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE112E19470A9000ECAD14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DBCE113219470A9000ECAD14 /* CCURLConnection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCURLConnection-Prefix.pch"; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				DBCE117519470C8900ECAD14 /* CCTextParser.m */,
 				DBCE118B1947202600ECAD14 /* CCBasicParser.h */,
 				DBCE118C1947202600ECAD14 /* CCBasicParser.m */,
+				DBBB548F19A37BA9007F77FD /* CCMultipartParser.h */,
+				DBBB549019A37BA9007F77FD /* CCMultipartParser.m */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBB549119A37BA9007F77FD /* CCMultipartParser.m in Sources */,
 				DBCE118819470C8900ECAD14 /* CCURLConnection.m in Sources */,
 				DBCE118619470C8900ECAD14 /* CCJsonParser.m in Sources */,
 				DBCE117D19470C8900ECAD14 /* CCAspNetQueryEncoder.m in Sources */,

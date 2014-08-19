@@ -10,6 +10,6 @@
 
 @protocol CCParser <NSObject>
 
-- (id)objectWithData:(NSData *)data;
+- (id)objectWithData:(NSData *)data parameters:(NSString *)parameters;
 
 @end

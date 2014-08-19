@@ -26,7 +26,7 @@ static CCJsonParser *_parser;
 
 #pragma mark - CCParser
 
-- (id)objectWithData:(NSData *)data
+- (id)objectWithData:(NSData *)data parameters:(NSString *)parameters
 {
     return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
 }

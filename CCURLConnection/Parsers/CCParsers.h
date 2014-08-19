@@ -12,5 +12,6 @@
 #import "CCBasicParser.h"
 #import "CCJsonParser.h"
 #import "CCTextParser.h"
+#import "CCMultipartParser.h"
 
 #endif

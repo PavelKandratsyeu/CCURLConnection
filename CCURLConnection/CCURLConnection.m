@@ -38,7 +38,9 @@ static NSArray *_bodyEncoders;
                      @"text/plain": [CCTextParser sharedParser],
                      @"text/html": [CCTextParser sharedParser],
                      @"application/pdf": [CCBasicParser sharedParser],
-                     @"image/png": [CCBasicParser sharedParser]};
+                     @"image/png": [CCBasicParser sharedParser],
+                     @"application/octet-stream": [CCBasicParser sharedParser],
+                     @"multipart/form-data": [CCMultipartParser sharedParser]};
         _methods = @{@(CCURLRequestMethodGet): @"GET",
                      @(CCURLRequestMethodDelete): @"DELETE",
                      @(CCURLRequestMethodPost): @"POST",
@@ -141,7 +143,7 @@ static NSArray *_bodyEncoders;
 - (id<CCParser>)parser
 {
     NSString *contentType = self.response.allHeaderFields[@"Content-Type"];
-    NSUInteger location = [contentType rangeOfString:@";"].location;
+    NSUInteger location = [contentType rangeOfString:@"; "].location;
     if (location != NSNotFound) {
         contentType = [contentType substringToIndex:location];
     }
@@ -150,7 +152,11 @@ static NSArray *_bodyEncoders;
 
 - (id)parsedResponse
 {
-    return [self.parser objectWithData:self.data];
+    NSString *contentType = self.response.allHeaderFields[@"Content-Type"];
+    NSUInteger location = [contentType rangeOfString:@"; "].location;
+    return [self.parser objectWithData:self.data parameters:(location == NSNotFound ?
+                                                             nil :
+                                                             [contentType substringFromIndex:location + 2])];
 }
 
 - (void)setConnection:(NSURLConnection *)connection

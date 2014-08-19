@@ -26,7 +26,7 @@ static CCTextParser *_parser;
 
 #pragma mark - CCParser
 
-- (id)objectWithData:(NSData *)data
+- (id)objectWithData:(NSData *)data parameters:(NSString *)parameters
 {
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }

@@ -6,8 +6,6 @@
 //
 //
 
-#import <UIKit/UIKit.h>
-
 #define CCURL_CONNECTION_ERROR_DOMAIN @"CCURL_CONNECTION_ERROR_DOMAIN"
 
 typedef enum {

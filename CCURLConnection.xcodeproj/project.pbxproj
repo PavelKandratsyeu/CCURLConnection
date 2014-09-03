@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		DBBB549119A37BA9007F77FD /* CCMultipartParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBB549019A37BA9007F77FD /* CCMultipartParser.m */; };
+		DBCD8EA619B701D600348C54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBCD8EA419B701D600348C54 /* InfoPlist.strings */; };
+		DBCD8EB019B701D600348C54 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE113C19470A9000ECAD14 /* XCTest.framework */; };
+		DBCD8EB419B701D600348C54 /* CCURLConnectionOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCD8E9A19B701D600348C54 /* CCURLConnectionOSX.framework */; };
+		DBCD8EBA19B701D700348C54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBCD8EB819B701D700348C54 /* InfoPlist.strings */; };
+		DBCD8EBC19B701D700348C54 /* CCURLConnectionOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCD8EBB19B701D700348C54 /* CCURLConnectionOSXTests.m */; };
+		DBCD8EC319B7023E00348C54 /* CCDefaultBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115F19470C8900ECAD14 /* CCDefaultBodyEncoder.m */; };
+		DBCD8EC419B7023E00348C54 /* CCDefaultMultipartBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116119470C8900ECAD14 /* CCDefaultMultipartBodyEncoder.m */; };
+		DBCD8EC519B7023E00348C54 /* CCAspNetBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115819470C8900ECAD14 /* CCAspNetBodyEncoder.m */; };
+		DBCD8EC619B7023E00348C54 /* CCAspNetMultipartBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115A19470C8900ECAD14 /* CCAspNetMultipartBodyEncoder.m */; };
+		DBCD8EC719B7023E00348C54 /* CCJsonBodyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116519470C8900ECAD14 /* CCJsonBodyEncoder.m */; };
+		DBCD8EC819B7023E00348C54 /* CCDefaultQueryEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116319470C8900ECAD14 /* CCDefaultQueryEncoder.m */; };
+		DBCD8EC919B7023E00348C54 /* CCAspNetQueryEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE115C19470C8900ECAD14 /* CCAspNetQueryEncoder.m */; };
+		DBCD8ECA19B7024300348C54 /* CCJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117219470C8900ECAD14 /* CCJsonParser.m */; };
+		DBCD8ECB19B7024300348C54 /* CCTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117519470C8900ECAD14 /* CCTextParser.m */; };
+		DBCD8ECC19B7024300348C54 /* CCBasicParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE118C1947202600ECAD14 /* CCBasicParser.m */; };
+		DBCD8ECD19B7024300348C54 /* CCMultipartParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBB549019A37BA9007F77FD /* CCMultipartParser.m */; };
+		DBCD8ECE19B7024900348C54 /* CCFilePostParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116919470C8900ECAD14 /* CCFilePostParameter.m */; };
+		DBCD8ECF19B7024900348C54 /* NSString+EncodeURLParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE116D19470C8900ECAD14 /* NSString+EncodeURLParameter.m */; };
+		DBCD8ED019B7024900348C54 /* CCURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCE117719470C8900ECAD14 /* CCURLConnection.m */; };
 		DBCE112F19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
 		DBCE113D19470A9000ECAD14 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE113C19470A9000ECAD14 /* XCTest.framework */; };
 		DBCE113E19470A9000ECAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCE112E19470A9000ECAD14 /* Foundation.framework */; };
@@ -33,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DBCD8EB219B701D600348C54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBCE112319470A9000ECAD14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBCD8E9919B701D600348C54;
+			remoteInfo = CCURLConnectionOSX;
+		};
 		DBCE114119470A9000ECAD14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DBCE112319470A9000ECAD14 /* Project object */;
@@ -57,6 +83,17 @@
 /* Begin PBXFileReference section */
 		DBBB548F19A37BA9007F77FD /* CCMultipartParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMultipartParser.h; sourceTree = "<group>"; };
 		DBBB549019A37BA9007F77FD /* CCMultipartParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMultipartParser.m; sourceTree = "<group>"; };
+		DBCD8E9A19B701D600348C54 /* CCURLConnectionOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CCURLConnectionOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCD8E9E19B701D600348C54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DBCD8E9F19B701D600348C54 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DBCD8EA019B701D600348C54 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DBCD8EA319B701D600348C54 /* CCURLConnectionOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCURLConnectionOSX-Info.plist"; sourceTree = "<group>"; };
+		DBCD8EA519B701D600348C54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBCD8EA719B701D600348C54 /* CCURLConnectionOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCURLConnectionOSX-Prefix.pch"; sourceTree = "<group>"; };
+		DBCD8EAF19B701D600348C54 /* CCURLConnectionOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCURLConnectionOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCD8EB719B701D700348C54 /* CCURLConnectionOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCURLConnectionOSXTests-Info.plist"; sourceTree = "<group>"; };
+		DBCD8EB919B701D700348C54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBCD8EBB19B701D700348C54 /* CCURLConnectionOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCURLConnectionOSXTests.m; sourceTree = "<group>"; };
 		DBCE112B19470A9000ECAD14 /* libCCURLConnection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCURLConnection.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE112E19470A9000ECAD14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DBCE113219470A9000ECAD14 /* CCURLConnection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCURLConnection-Prefix.pch"; sourceTree = "<group>"; };
@@ -104,6 +141,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DBCD8E9619B701D600348C54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCD8EAC19B701D600348C54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCD8EB419B701D600348C54 /* CCURLConnectionOSX.framework in Frameworks */,
+				DBCD8EB019B701D600348C54 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBCE112819470A9000ECAD14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,12 +180,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DBCD8E9D19B701D600348C54 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8E9E19B701D600348C54 /* Foundation.framework */,
+				DBCD8E9F19B701D600348C54 /* CoreData.framework */,
+				DBCD8EA019B701D600348C54 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DBCD8EA119B701D600348C54 /* CCURLConnectionOSX */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8EA219B701D600348C54 /* Supporting Files */,
+			);
+			path = CCURLConnectionOSX;
+			sourceTree = "<group>";
+		};
+		DBCD8EA219B701D600348C54 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8EA319B701D600348C54 /* CCURLConnectionOSX-Info.plist */,
+				DBCD8EA419B701D600348C54 /* InfoPlist.strings */,
+				DBCD8EA719B701D600348C54 /* CCURLConnectionOSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBCD8EB519B701D600348C54 /* CCURLConnectionOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8EBB19B701D700348C54 /* CCURLConnectionOSXTests.m */,
+				DBCD8EB619B701D700348C54 /* Supporting Files */,
+			);
+			path = CCURLConnectionOSXTests;
+			sourceTree = "<group>";
+		};
+		DBCD8EB619B701D700348C54 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8EB719B701D700348C54 /* CCURLConnectionOSXTests-Info.plist */,
+				DBCD8EB819B701D700348C54 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DBCE112219470A9000ECAD14 = {
 			isa = PBXGroup;
 			children = (
 				DBCE119319473BED00ECAD14 /* CCURLConnection.podspec */,
 				DBCE113019470A9000ECAD14 /* CCURLConnection */,
 				DBCE114419470A9000ECAD14 /* CCURLConnectionTests */,
+				DBCD8EA119B701D600348C54 /* CCURLConnectionOSX */,
+				DBCD8EB519B701D600348C54 /* CCURLConnectionOSXTests */,
 				DBCE112D19470A9000ECAD14 /* Frameworks */,
 				DBCE112C19470A9000ECAD14 /* Products */,
 			);
@@ -143,6 +244,8 @@
 			children = (
 				DBCE112B19470A9000ECAD14 /* libCCURLConnection.a */,
 				DBCE113B19470A9000ECAD14 /* CCURLConnectionTests.xctest */,
+				DBCD8E9A19B701D600348C54 /* CCURLConnectionOSX.framework */,
+				DBCD8EAF19B701D600348C54 /* CCURLConnectionOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +256,7 @@
 				DBCE119519473CA100ECAD14 /* UIKit.framework */,
 				DBCE112E19470A9000ECAD14 /* Foundation.framework */,
 				DBCE113C19470A9000ECAD14 /* XCTest.framework */,
+				DBCD8E9D19B701D600348C54 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,7 +349,53 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		DBCD8E9719B701D600348C54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		DBCD8E9919B701D600348C54 /* CCURLConnectionOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCD8EC119B701D700348C54 /* Build configuration list for PBXNativeTarget "CCURLConnectionOSX" */;
+			buildPhases = (
+				DBCD8E9519B701D600348C54 /* Sources */,
+				DBCD8E9619B701D600348C54 /* Frameworks */,
+				DBCD8E9719B701D600348C54 /* Headers */,
+				DBCD8E9819B701D600348C54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCURLConnectionOSX;
+			productName = CCURLConnectionOSX;
+			productReference = DBCD8E9A19B701D600348C54 /* CCURLConnectionOSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBCD8EAE19B701D600348C54 /* CCURLConnectionOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCD8EC219B701D700348C54 /* Build configuration list for PBXNativeTarget "CCURLConnectionOSXTests" */;
+			buildPhases = (
+				DBCD8EAB19B701D600348C54 /* Sources */,
+				DBCD8EAC19B701D600348C54 /* Frameworks */,
+				DBCD8EAD19B701D600348C54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBCD8EB319B701D600348C54 /* PBXTargetDependency */,
+			);
+			name = CCURLConnectionOSXTests;
+			productName = CCURLConnectionOSXTests;
+			productReference = DBCD8EAF19B701D600348C54 /* CCURLConnectionOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DBCE112A19470A9000ECAD14 /* CCURLConnection */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBCE114E19470A9000ECAD14 /* Build configuration list for PBXNativeTarget "CCURLConnection" */;
@@ -288,6 +438,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					DBCD8EAE19B701D600348C54 = {
+						TestTargetID = DBCD8E9919B701D600348C54;
+					};
+					DBCE113A19470A9000ECAD14 = {
+						TestTargetID = DBCD8E9919B701D600348C54;
+					};
+				};
 			};
 			buildConfigurationList = DBCE112619470A9000ECAD14 /* Build configuration list for PBXProject "CCURLConnection" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -303,11 +461,29 @@
 			targets = (
 				DBCE112A19470A9000ECAD14 /* CCURLConnection */,
 				DBCE113A19470A9000ECAD14 /* CCURLConnectionTests */,
+				DBCD8E9919B701D600348C54 /* CCURLConnectionOSX */,
+				DBCD8EAE19B701D600348C54 /* CCURLConnectionOSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DBCD8E9819B701D600348C54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCD8EA619B701D600348C54 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCD8EAD19B701D600348C54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCD8EBA19B701D700348C54 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBCE113919470A9000ECAD14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +495,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DBCD8E9519B701D600348C54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCD8EC919B7023E00348C54 /* CCAspNetQueryEncoder.m in Sources */,
+				DBCD8EC419B7023E00348C54 /* CCDefaultMultipartBodyEncoder.m in Sources */,
+				DBCD8ECA19B7024300348C54 /* CCJsonParser.m in Sources */,
+				DBCD8ECD19B7024300348C54 /* CCMultipartParser.m in Sources */,
+				DBCD8EC619B7023E00348C54 /* CCAspNetMultipartBodyEncoder.m in Sources */,
+				DBCD8ED019B7024900348C54 /* CCURLConnection.m in Sources */,
+				DBCD8EC319B7023E00348C54 /* CCDefaultBodyEncoder.m in Sources */,
+				DBCD8EC819B7023E00348C54 /* CCDefaultQueryEncoder.m in Sources */,
+				DBCD8ECE19B7024900348C54 /* CCFilePostParameter.m in Sources */,
+				DBCD8ECB19B7024300348C54 /* CCTextParser.m in Sources */,
+				DBCD8EC719B7023E00348C54 /* CCJsonBodyEncoder.m in Sources */,
+				DBCD8ECC19B7024300348C54 /* CCBasicParser.m in Sources */,
+				DBCD8EC519B7023E00348C54 /* CCAspNetBodyEncoder.m in Sources */,
+				DBCD8ECF19B7024900348C54 /* NSString+EncodeURLParameter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCD8EAB19B701D600348C54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCD8EBC19B701D700348C54 /* CCURLConnectionOSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBCE112719470A9000ECAD14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,6 +557,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DBCD8EB319B701D600348C54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBCD8E9919B701D600348C54 /* CCURLConnectionOSX */;
+			targetProxy = DBCD8EB219B701D600348C54 /* PBXContainerItemProxy */;
+		};
 		DBCE114219470A9000ECAD14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DBCE112A19470A9000ECAD14 /* CCURLConnection */;
@@ -360,6 +570,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DBCD8EA419B701D600348C54 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBCD8EA519B701D600348C54 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DBCD8EB819B701D700348C54 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBCD8EB919B701D700348C54 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DBCE114719470A9000ECAD14 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -371,6 +597,102 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DBCD8EBD19B701D700348C54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCURLConnectionOSX/CCURLConnectionOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CCURLConnectionOSX/CCURLConnectionOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		DBCD8EBE19B701D700348C54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCURLConnectionOSX/CCURLConnectionOSX-Prefix.pch";
+				INFOPLIST_FILE = "CCURLConnectionOSX/CCURLConnectionOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		DBCD8EBF19B701D700348C54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CCURLConnectionOSX.framework/Versions/A/CCURLConnectionOSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCURLConnectionOSX/CCURLConnectionOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CCURLConnectionOSXTests/CCURLConnectionOSXTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DBCD8EC019B701D700348C54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CCURLConnectionOSX.framework/Versions/A/CCURLConnectionOSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCURLConnectionOSX/CCURLConnectionOSX-Prefix.pch";
+				INFOPLIST_FILE = "CCURLConnectionOSXTests/CCURLConnectionOSXTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		DBCE114C19470A9000ECAD14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -402,7 +724,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -433,7 +756,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -449,6 +773,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCURLConnection/CCURLConnection-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -465,6 +790,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCURLConnection/CCURLConnection-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -474,6 +800,7 @@
 		DBCE115219470A9000ECAD14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CCURLConnectionOSX.framework/Versions/A/CCURLConnectionOSX";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -487,6 +814,7 @@
 				);
 				INFOPLIST_FILE = "CCURLConnectionTests/CCURLConnectionTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -494,6 +822,7 @@
 		DBCE115319470A9000ECAD14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CCURLConnectionOSX.framework/Versions/A/CCURLConnectionOSX";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -503,6 +832,7 @@
 				GCC_PREFIX_HEADER = "CCURLConnection/CCURLConnection-Prefix.pch";
 				INFOPLIST_FILE = "CCURLConnectionTests/CCURLConnectionTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -510,6 +840,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DBCD8EC119B701D700348C54 /* Build configuration list for PBXNativeTarget "CCURLConnectionOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCD8EBD19B701D700348C54 /* Debug */,
+				DBCD8EBE19B701D700348C54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DBCD8EC219B701D700348C54 /* Build configuration list for PBXNativeTarget "CCURLConnectionOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCD8EBF19B701D700348C54 /* Debug */,
+				DBCD8EC019B701D700348C54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DBCE112619470A9000ECAD14 /* Build configuration list for PBXProject "CCURLConnection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

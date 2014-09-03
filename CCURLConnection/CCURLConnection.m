@@ -163,14 +163,18 @@ static NSArray *_bodyEncoders;
 {
     if (_connection) {
         [_connection cancel];
+#if TARGET_OS_IPHONE
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+#endif
         self.data = nil;
         self.response = nil;
         self.callback = nil;
     }
     _connection = connection;
     if (connection) {
+#if TARGET_OS_IPHONE
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+#endif
     }
 }
 

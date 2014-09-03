@@ -6,6 +6,10 @@
 //
 //
 
+#if TARGET_OS_IPHONE
+
 @interface CCApplication : UIApplication
 
 @end
+
+#endif

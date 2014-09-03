@@ -6,6 +6,8 @@
 //
 //
 
+#if TARGET_OS_IPHONE
+
 #import "CCApplication.h"
 
 @implementation CCApplication
@@ -26,3 +28,5 @@ static unsigned int _networkActivityCounter = 0;
 }
 
 @end
+
+#endif

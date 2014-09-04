@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CCURLConnection"
-  s.version      = "0.0.6"
+  s.version      = "0.0.9"
   s.summary      = "A library to simplify interactions with remote APIs."
 
   # s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/KondratyevPavel/CCURLConnection.git", :tag => "v0.0.6"}
+  s.source       = { :git => "https://github.com/KondratyevPavel/CCURLConnection.git", :tag => "v0.0.9"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -115,8 +115,9 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  s.frameworks = "UIKit", "Foundation"
+  s.framework  = "Foundation"
+  s.ios.framework = "UIKit"
+  # s.frameworks = "UIKit", "Foundation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"

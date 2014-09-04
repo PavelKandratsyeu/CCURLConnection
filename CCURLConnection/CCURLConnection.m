@@ -39,6 +39,7 @@ static NSArray *_bodyEncoders;
                      @"text/html": [CCTextParser sharedParser],
                      @"application/pdf": [CCBasicParser sharedParser],
                      @"image/png": [CCBasicParser sharedParser],
+                     @"text/event-stream": [CCBasicParser sharedParser],
                      @"application/octet-stream": [CCBasicParser sharedParser],
                      @"multipart/form-data": [CCMultipartParser sharedParser]};
         _methods = @{@(CCURLRequestMethodGet): @"GET",
@@ -140,6 +141,11 @@ static NSArray *_bodyEncoders;
     }
 }
 
+- (id<CCParser>)parserForContentType:(NSString *)contentType
+{
+    return _parsers[contentType];
+}
+
 - (id<CCParser>)parser
 {
     NSString *contentType = self.response.allHeaderFields[@"Content-Type"];
@@ -147,7 +153,7 @@ static NSArray *_bodyEncoders;
     if (location != NSNotFound) {
         contentType = [contentType substringToIndex:location];
     }
-    return _parsers[contentType];
+    return [self parserForContentType:contentType];
 }
 
 - (id)parsedResponse

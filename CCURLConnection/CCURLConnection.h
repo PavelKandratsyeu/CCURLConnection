@@ -6,6 +6,8 @@
 //
 //
 
+#import "CCParser.h"
+
 #define CCURL_CONNECTION_ERROR_DOMAIN @"CCURL_CONNECTION_ERROR_DOMAIN"
 
 typedef enum {
@@ -137,6 +139,7 @@ typedef void (^CCURLConnectionCallback)(CCURLConnection *connection, id response
 
 @interface CCURLConnection : NSObject <NSURLConnectionDataDelegate>
 
+- (id<CCParser>)parserForContentType:(NSString *)contentType;
 - (void)startWithURL:(NSURL *)url
               method:(CCURLRequestMethod)method
           parameters:(NSDictionary *)parameters

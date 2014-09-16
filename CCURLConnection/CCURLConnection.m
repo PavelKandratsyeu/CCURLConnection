@@ -136,8 +136,12 @@ static NSArray *_bodyEncoders;
         [headers enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
             [request addValue:obj forHTTPHeaderField:key];
         }];
-        self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
         self.callback = callback;
+        NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
+        [self.connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+        [self.connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+        self.connection = connection;
+        [self.connection start];
     }
 }
 
